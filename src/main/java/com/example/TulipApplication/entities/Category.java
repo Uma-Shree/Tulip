@@ -7,7 +7,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "categories")
-public class Category {
+public class Category extends DateAudit{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
