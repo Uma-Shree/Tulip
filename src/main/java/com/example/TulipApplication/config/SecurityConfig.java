@@ -28,6 +28,9 @@ public class SecurityConfig {
                         // Allow public access to login/register (we will build these next)
                         .requestMatchers("/api/supplier/**").hasAnyAuthority("SUPPLIER", "CUSTOMER")
                         .anyRequest().authenticated()
+
+                        .requestMatchers("/api/cart/**").permitAll()
+
                 );
 
         return http.build();
